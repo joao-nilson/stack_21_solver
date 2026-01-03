@@ -1,0 +1,143 @@
+{
+  "moves": [
+    {
+      "turn": 0,
+      "total": 0,
+      "player_to_move": "MAX",
+      "stack_index": 0,
+      "is_terminal": false,
+      "value": -810,
+      "remaining_stack": [
+        6,
+        6,
+        5,
+        5,
+        4,
+        4,
+        3,
+        3,
+        2,
+        2,
+        1,
+        1
+      ]
+    },
+    {
+      "turn": 1,
+      "total": 6,
+      "player_to_move": "MIN",
+      "stack_index": 2,
+      "is_terminal": false,
+      "value": -810,
+      "move": {
+        "value_taken": 6,
+        "value_discarded": 6,
+        "new_total": 6
+      },
+      "remaining_stack": [
+        5,
+        5,
+        4,
+        4,
+        3,
+        3,
+        2,
+        2,
+        1,
+        1
+      ]
+    },
+    {
+      "turn": 2,
+      "total": 11,
+      "player_to_move": "MAX",
+      "stack_index": 4,
+      "is_terminal": false,
+      "value": -810,
+      "move": {
+        "value_taken": 5,
+        "value_discarded": 5,
+        "new_total": 11
+      },
+      "remaining_stack": [
+        4,
+        4,
+        3,
+        3,
+        2,
+        2,
+        1,
+        1
+      ]
+    },
+    {
+      "turn": 3,
+      "total": 15,
+      "player_to_move": "MIN",
+      "stack_index": 6,
+      "is_terminal": false,
+      "value": -810,
+      "move": {
+        "value_taken": 4,
+        "value_discarded": 4,
+        "new_total": 15
+      },
+      "remaining_stack": [
+        3,
+        3,
+        2,
+        2,
+        1,
+        1
+      ]
+    },
+    {
+      "turn": 4,
+      "total": 18,
+      "player_to_move": "MAX",
+      "stack_index": 8,
+      "is_terminal": false,
+      "value": -810,
+      "move": {
+        "value_taken": 3,
+        "value_discarded": 3,
+        "new_total": 18
+      },
+      "remaining_stack": [
+        2,
+        2,
+        1,
+        1
+      ]
+    },
+    {
+      "turn": 5,
+      "total": 20,
+      "player_to_move": "MIN",
+      "stack_index": 10,
+      "is_terminal": false,
+      "value": -810,
+      "move": {
+        "value_taken": 2,
+        "value_discarded": 2,
+        "new_total": 20
+      },
+      "remaining_stack": [
+        1,
+        1
+      ]
+    }
+  ],
+  "statistics": {
+    "total_moves": 5,
+    "final_total": 20,
+    "stack_usage": "10/12 values used",
+    "is_winning_path": false,
+    "is_bust_path": false,
+    "max_total_reached": 20,
+    "min_total_reached": 0,
+    "average_move_value": 4.0,
+    "max_moves": 3,
+    "min_moves": 2
+  }
+}
