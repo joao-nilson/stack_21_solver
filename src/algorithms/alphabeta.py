@@ -1,7 +1,3 @@
-"""
-Alpha-Beta Pruning: Optimized minimax with pruning.
-"""
-
 import time
 from typing import Tuple, Optional, Dict, Any
 from src.game.game_state import GameState
@@ -11,11 +7,7 @@ from src.algorithms.solution_tracker import SolutionTracker
 def alphabeta_with_tracking(state: GameState, depth: int, alpha: float, beta: float, 
                            is_maximizing: bool, tracker: SolutionTracker, 
                            depth_limit: Optional[int] = None) -> Tuple[float, Optional[GameState]]:
-    """
-    Alpha-beta pruning algorithm with solution path tracking.
-    
-    Returns: (value, terminal_state_on_optimal_path)
-    """
+
     tracker.nodes_evaluated += 1
     
     # Check terminal or depth limit
@@ -91,14 +83,12 @@ def alphabeta_with_tracking(state: GameState, depth: int, alpha: float, beta: fl
 
 # Alternative: Class-based implementation
 class AlphaBetaSolver:
-    """Alpha-beta pruning solver with statistics."""
     
     def __init__(self, depth_limit: Optional[int] = None):
         self.depth_limit = depth_limit
         self.tracker = SolutionTracker()
         
     def solve(self, state: GameState) -> Tuple[float, GameState]:
-        """Solve using alpha-beta pruning."""
         value, terminal_state = alphabeta_with_tracking(
             state, depth=0, alpha=float('-inf'), beta=float('inf'),
             is_maximizing=state.is_maximizing, tracker=self.tracker,
@@ -107,7 +97,6 @@ class AlphaBetaSolver:
         return value, terminal_state
     
     def get_statistics(self) -> Dict[str, Any]:
-        """Get solver statistics."""
         return {
             "algorithm": "alpha-beta",
             "nodes_evaluated": self.tracker.nodes_evaluated,
@@ -119,6 +108,5 @@ class AlphaBetaSolver:
         }
     
     def get_solution_path(self, initial_state: GameState) -> list:
-        """Get the optimal solution path."""
         value, terminal_state = self.solve(initial_state)
         return self.tracker.reconstruct_solution_path(initial_state, terminal_state)

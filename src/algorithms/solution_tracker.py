@@ -1,13 +1,8 @@
-"""
-Solution Tracker: Tracks the optimal solution path during minimax search.
-"""
-
 from typing import List, Dict, Any, Optional
 from src.game.game_state import GameState
 
 
 class SolutionTracker:
-    """Tracks the optimal solution path during minimax search."""
     
     def __init__(self):
         self.best_path = []           # Complete optimal path
@@ -17,7 +12,6 @@ class SolutionTracker:
     
     def record_best_move(self, state: GameState, best_child: Optional[GameState], 
                         depth: int, alpha: float, beta: float) -> None:
-        """Record a decision point in the optimal path."""
         decision = {
             'depth': depth,
             'total': state.total,
@@ -34,7 +28,6 @@ class SolutionTracker:
     
     def reconstruct_solution_path(self, root_state: GameState, 
                                 terminal_state: Optional[GameState]) -> List[GameState]:
-        """Reconstruct and store the complete solution path."""
         if terminal_state is None:
             return []
         

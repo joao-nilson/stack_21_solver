@@ -1,8 +1,3 @@
-"""
-Full Analysis: Comprehensive analysis of Stack-based 21 solver.
-FIXED VERSION - avoids circular references and fixes evaluation.
-"""
-
 import sys
 import os
 import json
@@ -19,22 +14,12 @@ from src.utils.logger import GameLogger
 
 
 class FixedGameAnalyzer:
-    """Comprehensive analyzer for Stack-based 21 games (FIXED)."""
     
     def __init__(self, log_level="INFO"):
-        """Initialize analyzer with logging."""
         self.logger = GameLogger(name="FixedAnalyzer", log_level=log_level)
         self.results = {}
         
     def analyze_game(self, stack, algorithm="both", depth_limit=None):
-        """
-        Run full analysis on a game with given stack.
-        
-        Args:
-            stack: Game stack
-            algorithm: "minimax", "alphabeta", or "both"
-            depth_limit: Maximum search depth
-        """
         self.logger.log_game_start(stack, algorithm, depth_limit)
         
         # Store stack info

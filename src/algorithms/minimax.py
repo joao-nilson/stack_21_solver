@@ -1,22 +1,12 @@
-"""
-Minimax Algorithm: Basic minimax implementation without pruning.
-"""
-
 import time
 from typing import Tuple, Optional, Dict, Any, List
 from src.game.game_state import GameState
 
 
 class MinimaxSolver:
-    """Basic minimax algorithm implementation."""
     
     def __init__(self, depth_limit: Optional[int] = None):
-        """
-        Initialize minimax solver.
-        
-        Args:
-            depth_limit: Maximum depth to search (None for unlimited)
-        """
+
         self.depth_limit = depth_limit
         self.nodes_evaluated = 0
         self.max_depth_reached = 0
@@ -24,15 +14,6 @@ class MinimaxSolver:
         self.transposition_table = {}  # Basic memoization
         
     def solve(self, state: GameState) -> Tuple[float, Optional[GameState]]:
-        """
-        Solve game using minimax from given state.
-        
-        Args:
-            state: Starting game state
-            
-        Returns:
-            Tuple of (value, best_child_state)
-        """
         start_time = time.time()
         
         # Reset counters
@@ -48,12 +29,6 @@ class MinimaxSolver:
         return value, best_child
     
     def _minimax(self, state: GameState, depth: int) -> Tuple[float, Optional[GameState]]:
-        """
-        Recursive minimax implementation.
-        
-        Returns:
-            Tuple of (value, best_child_state)
-        """
         self.nodes_evaluated += 1
         self.max_depth_reached = max(self.max_depth_reached, depth)
         
@@ -90,7 +65,6 @@ class MinimaxSolver:
             
             state.value = best_value
             
-            # Store in transposition table
             self.transposition_table[state_key] = (best_value, depth, best_child)
             
             return best_value, best_child
@@ -111,20 +85,17 @@ class MinimaxSolver:
             
             state.value = best_value
             
-            # Store in transposition table
             self.transposition_table[state_key] = (best_value, depth, best_child)
             
             return best_value, best_child
     
     def _get_state_key(self, state: GameState) -> str:
-        """Create a unique key for memoization."""
         # Simple key: total + stack position + is_maximizing
         # For more accuracy, include the remaining stack
         remaining_stack = tuple(state.stack[state.stack_index:]) if state.stack_index < len(state.stack) else ()
         return f"{state.total}_{state.stack_index}_{state.is_maximizing}_{remaining_stack}"
     
     def get_statistics(self) -> Dict[str, Any]:
-        """Get solver statistics."""
         return {
             "algorithm": "minimax",
             "nodes_evaluated": self.nodes_evaluated,
@@ -136,21 +107,12 @@ class MinimaxSolver:
         }
     
     def find_optimal_path(self, initial_state: GameState) -> List[GameState]:
-        """
-        Find and return the optimal path from initial state.
-        
-        Args:
-            initial_state: Starting game state
-            
-        Returns:
-            List of states representing the optimal path
-        """
+
         value, terminal_state = self.solve(initial_state)
         
         if terminal_state is None:
             return []
         
-        # Reconstruct path from terminal state back to root
         path = []
         current = terminal_state
         
@@ -158,18 +120,11 @@ class MinimaxSolver:
             path.append(current)
             current = current.parent
         
-        # Reverse to get path from root to terminal
         path.reverse()
         
         return path
     
     def analyze_move_quality(self, state: GameState) -> List[Dict[str, Any]]:
-        """
-        Analyze all possible moves from current state.
-        
-        Returns:
-            List of moves with their evaluations
-        """
         moves_analysis = []
         
         for move in state.get_possible_moves():
@@ -188,7 +143,6 @@ class MinimaxSolver:
             
             moves_analysis.append(analysis)
         
-        # Sort by evaluation (best first for current player)
         if state.is_maximizing:
             moves_analysis.sort(key=lambda x: x["evaluation"], reverse=True)
         else:
