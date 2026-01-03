@@ -1,0 +1,174 @@
+{
+    "sample_stacks": {
+      "simple_short": {
+        "description": "Simple 4-value stack for basic testing",
+        "stack": [3, 5, 2, 6],
+        "length": 4,
+        "sum": 16,
+        "average": 4.0,
+        "category": "test",
+        "expected_moves": 2,
+        "notes": "Good for basic algorithm testing and debugging"
+      },
+      "winning_21": {
+        "description": "Stack that allows reaching exactly 21",
+        "stack": [6, 6, 6, 3, 2, 4],
+        "length": 6,
+        "sum": 27,
+        "average": 4.5,
+        "category": "strategic",
+        "expected_moves": 3,
+        "notes": "Contains a forced win for the first player"
+      },
+      "bust_early": {
+        "description": "Stack likely to cause early bust",
+        "stack": [6, 6, 6, 6, 1, 1],
+        "length": 6,
+        "sum": 26,
+        "average": 4.333,
+        "category": "extreme",
+        "expected_moves": 3,
+        "notes": "High values may cause players to exceed 21 quickly"
+      },
+      "balanced_medium": {
+        "description": "Balanced stack with all values represented",
+        "stack": [3, 1, 6, 2, 5, 4, 1, 6, 2, 5, 3, 4],
+        "length": 12,
+        "sum": 42,
+        "average": 3.5,
+        "category": "balanced",
+        "expected_moves": 6,
+        "notes": "Even distribution of dice values"
+      },
+      "all_sixes": {
+        "description": "Extreme case - all values are 6",
+        "stack": [6, 6, 6, 6, 6, 6, 6, 6],
+        "length": 8,
+        "sum": 48,
+        "average": 6.0,
+        "category": "extreme",
+        "expected_moves": 4,
+        "notes": "Will bust after 4 moves (4×6=24 > 21)"
+      },
+      "all_ones": {
+        "description": "Extreme case - all values are 1",
+        "stack": [1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+        "length": 10,
+        "sum": 10,
+        "average": 1.0,
+        "category": "extreme",
+        "expected_moves": 5,
+        "notes": "Will never reach 21 with this stack"
+      },
+      "alternating": {
+        "description": "Alternating high and low values",
+        "stack": [1, 6, 2, 5, 3, 4, 1, 6, 2, 5],
+        "length": 10,
+        "sum": 35,
+        "average": 3.5,
+        "category": "pattern",
+        "expected_moves": 5,
+        "notes": "Regular pattern for testing move decisions"
+      },
+      "increasing": {
+        "description": "Increasing pairs of values",
+        "stack": [1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6],
+        "length": 12,
+        "sum": 42,
+        "average": 3.5,
+        "category": "pattern",
+        "expected_moves": 6,
+        "notes": "Systematic increase for testing algorithms"
+      },
+      "decreasing": {
+        "description": "Decreasing pairs of values",
+        "stack": [6, 6, 5, 5, 4, 4, 3, 3, 2, 2, 1, 1],
+        "length": 12,
+        "sum": 42,
+        "average": 3.5,
+        "category": "pattern",
+        "expected_moves": 6,
+        "notes": "Mirror of increasing pattern"
+      },
+      "strategic_1": {
+        "description": "Stack with strategic decisions",
+        "stack": [4, 3, 5, 2, 6, 1, 3, 4, 2, 5],
+        "length": 10,
+        "sum": 35,
+        "average": 3.5,
+        "category": "strategic",
+        "expected_moves": 5,
+        "notes": "Requires careful move selection to win"
+      },
+      "strategic_2": {
+        "description": "Another strategic stack",
+        "stack": [2, 5, 3, 4, 6, 1, 2, 5, 3, 4],
+        "length": 10,
+        "sum": 35,
+        "average": 3.5,
+        "category": "strategic",
+        "expected_moves": 5,
+        "notes": "Balanced with interesting decision points"
+      },
+      "challenge_1": {
+        "description": "Challenging stack for algorithms",
+        "stack": [6, 1, 5, 2, 4, 3, 6, 1, 5, 2, 4, 3],
+        "length": 12,
+        "sum": 42,
+        "average": 3.5,
+        "category": "challenge",
+        "expected_moves": 6,
+        "notes": "Complex decision tree with many branches"
+      },
+      "challenge_2": {
+        "description": "Another challenging stack",
+        "stack": [3, 4, 5, 2, 6, 1, 4, 3, 2, 5, 1, 6],
+        "length": 12,
+        "sum": 42,
+        "average": 3.5,
+        "category": "challenge",
+        "expected_moves": 6,
+        "notes": "Large branching factor for testing pruning efficiency"
+      },
+      "quick_game": {
+        "description": "Short stack for quick games",
+        "stack": [4, 2, 6, 3, 5, 1],
+        "length": 6,
+        "sum": 21,
+        "average": 3.5,
+        "category": "quick",
+        "expected_moves": 3,
+        "notes": "Exactly sums to 21 - interesting endgame possibilities"
+      },
+      "demo_stack": {
+        "description": "Good stack for demonstrations",
+        "stack": [3, 5, 2, 6, 4, 1, 3, 2],
+        "length": 8,
+        "sum": 26,
+        "average": 3.25,
+        "category": "demo",
+        "expected_moves": 4,
+        "notes": "Well-balanced for showing algorithm features"
+      }
+    },
+    "categories": {
+      "test": "Simple stacks for basic testing",
+      "strategic": "Stacks that require strategic thinking",
+      "extreme": "Stacks with extreme values (all high or all low)",
+      "balanced": "Stacks with balanced distribution of values",
+      "pattern": "Stacks with recognizable patterns",
+      "challenge": "Complex stacks that challenge algorithms",
+      "quick": "Short stacks for quick games",
+      "demo": "Good stacks for demonstrations"
+    },
+    "metadata": {
+      "total_stacks": 15,
+      "average_length": 8.93,
+      "min_length": 4,
+      "max_length": 12,
+      "total_values": 134,
+      "date_created": "2024-01-15",
+      "purpose": "Testing and demonstration of Stack-based 21 solver",
+      "game_rules": "Players choose one of two values, add to total, discard the other. Goal: reach exactly 21 or force opponent to exceed 21."
+    }
+  }

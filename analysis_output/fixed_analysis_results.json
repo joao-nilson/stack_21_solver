@@ -1,0 +1,160 @@
+{
+  "stack_info": {
+    "length": 8,
+    "sum": 26,
+    "average": 3.25,
+    "min": 1,
+    "max": 6,
+    "value_distribution": {
+      "1": 1,
+      "2": 2,
+      "3": 2,
+      "4": 1,
+      "5": 1,
+      "6": 1
+    },
+    "possible_max_total": 26,
+    "expected_moves": 4
+  },
+  "minimax": {
+    "value": 9,
+    "best_first_move": "(3, 5, 3)",
+    "statistics": {
+      "algorithm": "minimax",
+      "nodes_evaluated": 31,
+      "max_depth_reached": 4,
+      "execution_time_seconds": 0.00012183189392089844,
+      "transposition_hits": 14,
+      "depth_limit": null,
+      "nodes_per_second": 254448.97064579255,
+      "execution_time": 0.00012302398681640625
+    },
+    "path_length": 2,
+    "terminal_total": 3,
+    "move_sequence": [
+      {
+        "turn": 1,
+        "value_taken": 3,
+        "value_discarded": 5,
+        "new_total": 3,
+        "player": "MAX"
+      }
+    ]
+  },
+  "alphabeta": {
+    "value": 9,
+    "summary": {
+      "total_moves": 4,
+      "final_total": 12,
+      "nodes_evaluated": 30,
+      "pruned_branches": 1,
+      "pruning_efficiency": 0.03225806451612903,
+      "decision_points": 15,
+      "move_sequence": [
+        {
+          "player": "MAX",
+          "turn": 1,
+          "value_taken": 3,
+          "value_discarded": 5,
+          "new_total": 3,
+          "is_terminal": false,
+          "evaluation": 9
+        },
+        {
+          "player": "MIN",
+          "turn": 2,
+          "value_taken": 4,
+          "value_discarded": 1,
+          "new_total": 7,
+          "is_terminal": false,
+          "evaluation": 9
+        },
+        {
+          "player": "MAX",
+          "turn": 3,
+          "value_taken": 2,
+          "value_discarded": 6,
+          "new_total": 9,
+          "is_terminal": false,
+          "evaluation": 9
+        },
+        {
+          "player": "MIN",
+          "turn": 4,
+          "value_taken": 3,
+          "value_discarded": 2,
+          "new_total": 12,
+          "is_terminal": true,
+          "evaluation": 9
+        }
+      ],
+      "winning_player": "None",
+      "win_reason": "stack_exhausted",
+      "execution_time": 0.00012612342834472656
+    },
+    "move_sequence": [
+      {
+        "turn": 1,
+        "value_taken": 3,
+        "value_discarded": 5,
+        "new_total": 3,
+        "player": "MAX"
+      },
+      {
+        "turn": 2,
+        "value_taken": 4,
+        "value_discarded": 1,
+        "new_total": 7,
+        "player": "MIN"
+      },
+      {
+        "turn": 3,
+        "value_taken": 2,
+        "value_discarded": 6,
+        "new_total": 9,
+        "player": "MAX"
+      },
+      {
+        "turn": 4,
+        "value_taken": 3,
+        "value_discarded": 2,
+        "new_total": 12,
+        "player": "MIN"
+      }
+    ]
+  },
+  "comparison": {
+    "value_difference": 0,
+    "values_match": true,
+    "minimax_nodes": 31,
+    "alphabeta_nodes": 30,
+    "minimax_time": 0.00012302398681640625,
+    "alphabeta_time": 0.00012612342834472656,
+    "pruning_efficiency": 0.03225806451612903,
+    "speedup_factor": 1.0333333333333334,
+    "nodes_saved": 1
+  },
+  "benchmark": {
+    "4": {
+      "stack_size": 4,
+      "avg_minimax_nodes": 7.0,
+      "avg_alphabeta_nodes": 7.0,
+      "avg_speedup": 1.0,
+      "iterations": 2
+    },
+    "6": {
+      "stack_size": 6,
+      "avg_minimax_nodes": 15.0,
+      "avg_alphabeta_nodes": 11.0,
+      "avg_speedup": 1.3636363636363635,
+      "iterations": 2
+    },
+    "8": {
+      "stack_size": 8,
+      "avg_minimax_nodes": 31.0,
+      "avg_alphabeta_nodes": 30.0,
+      "avg_speedup": 1.0333333333333334,
+      "iterations": 2
+    }
+  }
+}

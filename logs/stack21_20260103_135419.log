@@ -1,0 +1,347 @@
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:66 - Logging to file: logs/stack21_20260103_135419.log
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:52 - Logger initialized for FullAnalyzer at level INFO
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:69 - ============================================================
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:70 - GAME START
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:71 - ============================================================
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:72 - Stack: [6, 6, 3, 2, 4, 1, 5, 3]
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:73 - Stack length: 8
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:74 - Algorithm: both
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:77 - Timestamp: 2026-01-03T13:54:19.634752
+2026-01-03 13:54:19 - FullAnalyzer - INFO - full_analysis.py:70 - Running Minimax analysis...
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:131 - ============================================================
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:132 - SOLUTION FOUND
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:133 - ============================================================
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:136 - Winner: MINIMAX
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:138 - Total moves: 1
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:139 - Final total: 6
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:141 - Move sequence:
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:148 -   Turn 1: MAX - Take 6, discard 6 -> Total: 6
+2026-01-03 13:54:19 - FullAnalyzer - INFO - full_analysis.py:99 - Running Alpha-Beta analysis...
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:131 - ============================================================
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:132 - SOLUTION FOUND
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:133 - ============================================================
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:136 - Winner: ALPHA-BETA
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:138 - Total moves: 1
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:139 - Final total: 6
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:141 - Move sequence:
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:148 -   Turn 1: MAX - Take 6, discard 6 -> Total: 6
+2026-01-03 13:54:19 - FullAnalyzer - INFO - full_analysis.py:160 - Algorithm comparison: {'value_difference': 0, 'values_match': True, 'speedup_factor': 0.5862068965517241, 'nodes_saved': -12, 'pruning_effectiveness': 0.06451612903225806}
+2026-01-03 13:54:19 - FullAnalyzer - INFO - full_analysis.py:185 - Visualizations exported to analysis_output/
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:111 - ============================================================
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:112 - PERFORMANCE STATISTICS
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:113 - ============================================================
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:120 - execution_time_seconds: 0.0004s
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:122 - peak_memory_mb: 0.01MB
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:126 - nodes_evaluated: 0
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:126 - branches_pruned: 0
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:126 - cache_hits: 0
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:126 - call_count: 0
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:124 - nodes_per_second: 0.00
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:126 - pruning_efficiency: 0
+2026-01-03 13:54:19 - FullAnalyzer - INFO - full_analysis.py:195 - Starting benchmark suite...
+2026-01-03 13:54:19 - FullAnalyzer - INFO - full_analysis.py:214 - Benchmarking short_4...
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:69 - ============================================================
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:70 - GAME START
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:71 - ============================================================
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:72 - Stack: [3, 5, 2, 6]
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:73 - Stack length: 4
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:74 - Algorithm: both
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:77 - Timestamp: 2026-01-03T13:54:19.639049
+2026-01-03 13:54:19 - FullAnalyzer - INFO - full_analysis.py:70 - Running Minimax analysis...
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:131 - ============================================================
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:132 - SOLUTION FOUND
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:133 - ============================================================
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:136 - Winner: MINIMAX
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:138 - Total moves: 1
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:139 - Final total: 3
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:141 - Move sequence:
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:148 -   Turn 1: MAX - Take 3, discard 5 -> Total: 3
+2026-01-03 13:54:19 - FullAnalyzer - INFO - full_analysis.py:99 - Running Alpha-Beta analysis...
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:131 - ============================================================
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:132 - SOLUTION FOUND
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:133 - ============================================================
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:136 - Winner: ALPHA-BETA
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:138 - Total moves: 1
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:139 - Final total: 3
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:141 - Move sequence:
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:148 -   Turn 1: MAX - Take 3, discard 5 -> Total: 3
+2026-01-03 13:54:19 - FullAnalyzer - INFO - full_analysis.py:160 - Algorithm comparison: {'value_difference': 0, 'values_match': True, 'speedup_factor': 1.0, 'nodes_saved': 0, 'pruning_effectiveness': 0.0}
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:111 - ============================================================
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:112 - PERFORMANCE STATISTICS
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:113 - ============================================================
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:120 - execution_time_seconds: 0.0003s
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:122 - peak_memory_mb: 0.01MB
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:126 - nodes_evaluated: 0
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:126 - branches_pruned: 0
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:126 - cache_hits: 0
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:126 - call_count: 0
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:124 - nodes_per_second: 0.00
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:126 - pruning_efficiency: 0
+2026-01-03 13:54:19 - FullAnalyzer - INFO - full_analysis.py:214 - Benchmarking medium_8...
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:69 - ============================================================
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:70 - GAME START
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:71 - ============================================================
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:72 - Stack: [5, 4, 4, 5, 1, 2, 3, 6]
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:73 - Stack length: 8
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:74 - Algorithm: both
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:77 - Timestamp: 2026-01-03T13:54:19.642033
+2026-01-03 13:54:19 - FullAnalyzer - INFO - full_analysis.py:70 - Running Minimax analysis...
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:131 - ============================================================
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:132 - SOLUTION FOUND
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:133 - ============================================================
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:136 - Winner: MINIMAX
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:138 - Total moves: 1
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:139 - Final total: 4
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:141 - Move sequence:
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:148 -   Turn 1: MAX - Take 4, discard 5 -> Total: 4
+2026-01-03 13:54:19 - FullAnalyzer - INFO - full_analysis.py:99 - Running Alpha-Beta analysis...
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:131 - ============================================================
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:132 - SOLUTION FOUND
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:133 - ============================================================
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:136 - Winner: ALPHA-BETA
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:138 - Total moves: 1
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:139 - Final total: 4
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:141 - Move sequence:
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:148 -   Turn 1: MAX - Take 4, discard 5 -> Total: 4
+2026-01-03 13:54:19 - FullAnalyzer - INFO - full_analysis.py:160 - Algorithm comparison: {'value_difference': 0, 'values_match': True, 'speedup_factor': 0.6774193548387096, 'nodes_saved': -10, 'pruning_effectiveness': 0.0}
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:111 - ============================================================
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:112 - PERFORMANCE STATISTICS
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:113 - ============================================================
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:120 - execution_time_seconds: 0.0004s
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:122 - peak_memory_mb: 0.01MB
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:126 - nodes_evaluated: 0
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:126 - branches_pruned: 0
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:126 - cache_hits: 0
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:126 - call_count: 0
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:124 - nodes_per_second: 0.00
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:126 - pruning_efficiency: 0
+2026-01-03 13:54:19 - FullAnalyzer - INFO - full_analysis.py:214 - Benchmarking long_12...
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:69 - ============================================================
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:70 - GAME START
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:71 - ============================================================
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:72 - Stack: [1, 6, 4, 6, 5, 2, 5, 6, 5, 1, 3, 3]
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:73 - Stack length: 12
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:74 - Algorithm: both
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:77 - Timestamp: 2026-01-03T13:54:19.645177
+2026-01-03 13:54:19 - FullAnalyzer - INFO - full_analysis.py:70 - Running Minimax analysis...
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:131 - ============================================================
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:132 - SOLUTION FOUND
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:133 - ============================================================
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:136 - Winner: MINIMAX
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:138 - Total moves: 1
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:139 - Final total: 6
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:141 - Move sequence:
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:148 -   Turn 1: MAX - Take 6, discard 1 -> Total: 6
+2026-01-03 13:54:19 - FullAnalyzer - INFO - full_analysis.py:99 - Running Alpha-Beta analysis...
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:131 - ============================================================
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:132 - SOLUTION FOUND
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:133 - ============================================================
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:136 - Winner: ALPHA-BETA
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:138 - Total moves: 1
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:139 - Final total: 6
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:141 - Move sequence:
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:148 -   Turn 1: MAX - Take 6, discard 1 -> Total: 6
+2026-01-03 13:54:19 - FullAnalyzer - INFO - full_analysis.py:160 - Algorithm comparison: {'value_difference': 0, 'values_match': True, 'speedup_factor': 1.75, 'nodes_saved': 27, 'pruning_effectiveness': 0.23404255319148937}
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:111 - ============================================================
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:112 - PERFORMANCE STATISTICS
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:113 - ============================================================
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:120 - execution_time_seconds: 0.0004s
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:122 - peak_memory_mb: 0.02MB
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:126 - nodes_evaluated: 0
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:126 - branches_pruned: 0
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:126 - cache_hits: 0
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:126 - call_count: 0
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:124 - nodes_per_second: 0.00
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:126 - pruning_efficiency: 0
+2026-01-03 13:54:19 - FullAnalyzer - INFO - full_analysis.py:214 - Benchmarking balanced...
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:69 - ============================================================
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:70 - GAME START
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:71 - ============================================================
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:72 - Stack: [2, 3, 4, 1, 5, 6, 3, 2, 5, 1]
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:73 - Stack length: 10
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:74 - Algorithm: both
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:77 - Timestamp: 2026-01-03T13:54:19.648664
+2026-01-03 13:54:19 - FullAnalyzer - INFO - full_analysis.py:70 - Running Minimax analysis...
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:131 - ============================================================
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:132 - SOLUTION FOUND
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:133 - ============================================================
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:136 - Winner: MINIMAX
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:138 - Total moves: 1
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:139 - Final total: 2
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:141 - Move sequence:
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:148 -   Turn 1: MAX - Take 2, discard 3 -> Total: 2
+2026-01-03 13:54:19 - FullAnalyzer - INFO - full_analysis.py:99 - Running Alpha-Beta analysis...
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:131 - ============================================================
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:132 - SOLUTION FOUND
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:133 - ============================================================
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:136 - Winner: ALPHA-BETA
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:138 - Total moves: 1
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:139 - Final total: 2
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:141 - Move sequence:
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:148 -   Turn 1: MAX - Take 2, discard 3 -> Total: 2
+2026-01-03 13:54:19 - FullAnalyzer - INFO - full_analysis.py:160 - Algorithm comparison: {'value_difference': 0, 'values_match': True, 'speedup_factor': 0.6507936507936508, 'nodes_saved': -22, 'pruning_effectiveness': 0.0}
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:111 - ============================================================
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:112 - PERFORMANCE STATISTICS
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:113 - ============================================================
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:120 - execution_time_seconds: 0.0005s
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:122 - peak_memory_mb: 0.02MB
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:126 - nodes_evaluated: 0
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:126 - branches_pruned: 0
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:126 - cache_hits: 0
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:126 - call_count: 0
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:124 - nodes_per_second: 0.00
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:126 - pruning_efficiency: 0
+2026-01-03 13:54:19 - FullAnalyzer - INFO - full_analysis.py:214 - Benchmarking biased_high...
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:69 - ============================================================
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:70 - GAME START
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:71 - ============================================================
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:72 - Stack: [6, 6, 6, 6, 6, 6, 6, 6, 6, 6]
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:73 - Stack length: 10
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:74 - Algorithm: both
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:77 - Timestamp: 2026-01-03T13:54:19.651777
+2026-01-03 13:54:19 - FullAnalyzer - INFO - full_analysis.py:70 - Running Minimax analysis...
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:131 - ============================================================
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:132 - SOLUTION FOUND
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:133 - ============================================================
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:136 - Winner: MINIMAX
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:138 - Total moves: 1
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:139 - Final total: 6
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:141 - Move sequence:
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:148 -   Turn 1: MAX - Take 6, discard 6 -> Total: 6
+2026-01-03 13:54:19 - FullAnalyzer - INFO - full_analysis.py:99 - Running Alpha-Beta analysis...
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:131 - ============================================================
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:132 - SOLUTION FOUND
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:133 - ============================================================
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:136 - Winner: ALPHA-BETA
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:138 - Total moves: 1
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:139 - Final total: 6
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:141 - Move sequence:
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:148 -   Turn 1: MAX - Take 6, discard 6 -> Total: 6
+2026-01-03 13:54:19 - FullAnalyzer - INFO - full_analysis.py:160 - Algorithm comparison: {'value_difference': 0, 'values_match': True, 'speedup_factor': 0.5, 'nodes_saved': -9, 'pruning_effectiveness': 0.21739130434782608}
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:111 - ============================================================
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:112 - PERFORMANCE STATISTICS
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:113 - ============================================================
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:120 - execution_time_seconds: 0.0003s
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:122 - peak_memory_mb: 0.02MB
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:126 - nodes_evaluated: 0
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:126 - branches_pruned: 0
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:126 - cache_hits: 0
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:126 - call_count: 0
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:124 - nodes_per_second: 0.00
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:126 - pruning_efficiency: 0
+2026-01-03 13:54:19 - FullAnalyzer - INFO - full_analysis.py:214 - Benchmarking biased_low...
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:69 - ============================================================
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:70 - GAME START
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:71 - ============================================================
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:72 - Stack: [1, 1, 5, 1, 1, 1, 5, 1, 3, 1]
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:73 - Stack length: 10
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:74 - Algorithm: both
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:77 - Timestamp: 2026-01-03T13:54:19.654491
+2026-01-03 13:54:19 - FullAnalyzer - INFO - full_analysis.py:70 - Running Minimax analysis...
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:131 - ============================================================
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:132 - SOLUTION FOUND
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:133 - ============================================================
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:136 - Winner: MINIMAX
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:138 - Total moves: 1
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:139 - Final total: 1
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:141 - Move sequence:
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:148 -   Turn 1: MAX - Take 1, discard 1 -> Total: 1
+2026-01-03 13:54:19 - FullAnalyzer - INFO - full_analysis.py:99 - Running Alpha-Beta analysis...
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:131 - ============================================================
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:132 - SOLUTION FOUND
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:133 - ============================================================
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:136 - Winner: ALPHA-BETA
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:138 - Total moves: 1
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:139 - Final total: 1
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:141 - Move sequence:
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:148 -   Turn 1: MAX - Take 1, discard 1 -> Total: 1
+2026-01-03 13:54:19 - FullAnalyzer - INFO - full_analysis.py:160 - Algorithm comparison: {'value_difference': 0, 'values_match': True, 'speedup_factor': 0.30158730158730157, 'nodes_saved': -44, 'pruning_effectiveness': 0.0}
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:111 - ============================================================
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:112 - PERFORMANCE STATISTICS
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:113 - ============================================================
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:120 - execution_time_seconds: 0.0005s
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:122 - peak_memory_mb: 0.02MB
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:126 - nodes_evaluated: 0
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:126 - branches_pruned: 0
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:126 - cache_hits: 0
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:126 - call_count: 0
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:124 - nodes_per_second: 0.00
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:126 - pruning_efficiency: 0
+2026-01-03 13:54:19 - FullAnalyzer - INFO - full_analysis.py:214 - Benchmarking alternating...
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:69 - ============================================================
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:70 - GAME START
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:71 - ============================================================
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:72 - Stack: [1, 6, 2, 5, 3, 4, 1, 6, 2, 5]
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:73 - Stack length: 10
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:74 - Algorithm: both
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:77 - Timestamp: 2026-01-03T13:54:19.657396
+2026-01-03 13:54:19 - FullAnalyzer - INFO - full_analysis.py:70 - Running Minimax analysis...
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:131 - ============================================================
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:132 - SOLUTION FOUND
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:133 - ============================================================
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:136 - Winner: MINIMAX
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:138 - Total moves: 1
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:139 - Final total: 1
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:141 - Move sequence:
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:148 -   Turn 1: MAX - Take 1, discard 6 -> Total: 1
+2026-01-03 13:54:19 - FullAnalyzer - INFO - full_analysis.py:99 - Running Alpha-Beta analysis...
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:131 - ============================================================
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:132 - SOLUTION FOUND
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:133 - ============================================================
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:136 - Winner: ALPHA-BETA
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:138 - Total moves: 1
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:139 - Final total: 6
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:141 - Move sequence:
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:148 -   Turn 1: MAX - Take 6, discard 1 -> Total: 6
+2026-01-03 13:54:19 - FullAnalyzer - INFO - full_analysis.py:160 - Algorithm comparison: {'value_difference': 0, 'values_match': True, 'speedup_factor': 0.9137931034482759, 'nodes_saved': -5, 'pruning_effectiveness': 0.04918032786885246}
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:111 - ============================================================
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:112 - PERFORMANCE STATISTICS
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:113 - ============================================================
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:120 - execution_time_seconds: 0.0004s
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:122 - peak_memory_mb: 0.02MB
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:126 - nodes_evaluated: 0
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:126 - branches_pruned: 0
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:126 - cache_hits: 0
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:126 - call_count: 0
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:124 - nodes_per_second: 0.00
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:126 - pruning_efficiency: 0
+2026-01-03 13:54:19 - FullAnalyzer - INFO - full_analysis.py:214 - Benchmarking increasing...
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:69 - ============================================================
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:70 - GAME START
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:71 - ============================================================
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:72 - Stack: [1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6]
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:73 - Stack length: 12
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:74 - Algorithm: both
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:77 - Timestamp: 2026-01-03T13:54:19.660445
+2026-01-03 13:54:19 - FullAnalyzer - INFO - full_analysis.py:70 - Running Minimax analysis...
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:131 - ============================================================
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:132 - SOLUTION FOUND
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:133 - ============================================================
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:136 - Winner: MINIMAX
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:138 - Total moves: 1
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:139 - Final total: 1
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:141 - Move sequence:
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:148 -   Turn 1: MAX - Take 1, discard 1 -> Total: 1
+2026-01-03 13:54:19 - FullAnalyzer - INFO - full_analysis.py:99 - Running Alpha-Beta analysis...
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:131 - ============================================================
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:132 - SOLUTION FOUND
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:133 - ============================================================
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:136 - Winner: ALPHA-BETA
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:138 - Total moves: 1
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:139 - Final total: 1
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:141 - Move sequence:
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:148 -   Turn 1: MAX - Take 1, discard 1 -> Total: 1
+2026-01-03 13:54:19 - FullAnalyzer - INFO - full_analysis.py:160 - Algorithm comparison: {'value_difference': 0, 'values_match': True, 'speedup_factor': 0.29545454545454547, 'nodes_saved': -31, 'pruning_effectiveness': 0.2542372881355932}
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:111 - ============================================================
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:112 - PERFORMANCE STATISTICS
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:113 - ============================================================
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:120 - execution_time_seconds: 0.0004s
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:122 - peak_memory_mb: 0.02MB
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:126 - nodes_evaluated: 0
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:126 - branches_pruned: 0
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:126 - cache_hits: 0
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:126 - call_count: 0
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:124 - nodes_per_second: 0.00
+2026-01-03 13:54:19 - FullAnalyzer - INFO - logger.py:126 - pruning_efficiency: 0
+2026-01-03 13:54:19 - FullAnalyzer - INFO - full_analysis.py:329 - Benchmark report saved to analysis_output/benchmark_report.txt
+2026-01-03 13:54:19 - FullAnalyzer - INFO - full_analysis.py:333 - Analyzing strategic positions...

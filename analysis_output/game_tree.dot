@@ -1,0 +1,7 @@
+digraph GameTree {
+  rankdir=TB;
+  node [shape=rectangle, style=filled];
+  edge [fontsize=10];
+
+  n140688149906832 [label="Player: MAX\nTotal: 0\nValue: 6.0", fillcolor="lightblue", style="filled", penwidth=1];
+}
