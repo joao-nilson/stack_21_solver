@@ -1,4 +1,4 @@
-stack_21_solver/
+```tack_21_solver/
 │
 ├── src/
 │   ├── __init__.py
@@ -41,8 +41,7 @@ stack_21_solver/
 ├── requirements.txt                                                            *
 ├── main.py                  # Main entry point                                 *
 └── README.md                                                                   *
-
-
+```
 
 
 # Install dependencies
