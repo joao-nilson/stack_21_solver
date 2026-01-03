@@ -64,3 +64,12 @@ python examples/full_analysis.py
 
 # Run main solver with custom stack
 python main.py --stack "3,5,2,6,4,1" --algorithm alphabeta
+
+# 1. Solution Path Demo - Main interactive tool
+python examples/solution_path_demo.py
+
+# 2. Heuristic Analysis - Deep dive into heuristics
+python examples/heuristic_analysis.py
+
+# 3. Path Visualization Demo - Interactive visualization
+python examples/path_visualization_demo.py

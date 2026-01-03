@@ -20,37 +20,42 @@ class GameState:
         return False
     
     def evaluate(self):
+        if self.total > 21:
+            return -10000 if self.is_maximizing else 10000
+        
         if self.total == 21:
-            return 1000 if self.is_maximizing else -1000
-        if self.total > 21:
-            return -1000 if self.is_maximizing else 1000
+            return 10000 if self.is_maximizing else -10000
         
-        # Game ended due to stack exhaustion
-        if self.is_terminal and self.stack_index >= len(self.stack) - 1:
-            # Closer to 21 is better for MAX, worse for MIN
-            score = 21 - self.total  # Positive if total < 21, negative if total > 21
-            return score if self.is_maximizing else -score
+        if self.is_terminal:
+            return self.total if self.is_maximizing else -self.total
         
-        # Non-terminal state: heuristic based on remaining possibilities
-        # Base heuristic: closeness to 21 without going over
-        if self.total > 21:
-            # Already over, but not marked terminal? Shouldn't happen
-            return -500 if self.is_maximizing else 500
-        
-        # Calculate remaining values in stack
         remaining_values = self.stack[self.stack_index:] if self.stack_index < len(self.stack) else []
+        remaining_pairs = len(remaining_values) // 2
         
-        # Simple heuristic: how close to 21, adjusted by remaining values
-        base_score = 21 - self.total
+        sorted_remaining = sorted(remaining_values)
         
-        # Adjust based on remaining values (more high values is better for reaching 21)
-        if remaining_values:
-            avg_remaining = sum(remaining_values) / len(remaining_values)
-            # Having higher average remaining values is better
-            adjustment = (avg_remaining - 3.5) / 10  # 3.5 is average of 1-6
-            base_score *= (1 + adjustment)
+        max_best_total = self.total
+        max_worst_total = self.total
         
-        return base_score if self.is_maximizing else -base_score
+        temp_values = sorted_remaining.copy()
+        
+        for i in range(remaining_pairs):
+            max_best_total += temp_values.pop() if temp_values else 0
+        
+        score = self.total * 10
+        
+        # Bonus for being close to 21
+        if 15 <= self.total <= 20:
+            score += (self.total - 14) * 100
+        
+        # Penalty for being too low
+        if self.total < 10:
+            score -= (10 - self.total) * 50
+        
+        # Consider remaining stack - more options is generally good
+        score += len(remaining_values) * 5
+        
+        return score if self.is_maximizing else -score
     
     def get_possible_moves(self):
         if self.is_terminal:
