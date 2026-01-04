@@ -117,14 +117,17 @@ class TreeVisualizer:
         return node_str
     
     def _get_children_for_display(self, state: GameState) -> List[GameState]:
-        if state.is_terminal or not hasattr(state, 'children'):
+        if state.is_terminal:
             return []
+        
+
+        if hasattr(state, 'children') and state.children:
+            children = state.children
         
         # Sort children by value for better display
         children = sorted(
             state.children, 
-            key=lambda x: x.value if x.value is not None else float('-inf'),
-            reverse=state.is_maximizing  # Best first for current player
+            key=lambda x: x.value if x.value is not None else x.evaluate(), reverse=state.is_maximizing  # Best first for current player
         )
         
         return children[:self.max_children]
