@@ -374,6 +374,40 @@ class HeuristicAnalysis:
         # Generate summary visualization
         self.generate_summary_visualization(comparison_data)
     
+
+    def blocking_heuristic(state, blocking_weight=1.5):
+        
+        
+        if state.is_terminal:
+            if state.total == 21: return 10000 if state.is_maximizing else -10000
+            if state.total > 21: return -10000 if state.is_maximizing else 10000
+            return state.total if state.is_maximizing else -state.total
+
+        my_score = (21 - abs(21 - state.total)) * 10
+
+        opponent_best_option = -float('inf')
+        moves = state.get_possible_moves()
+
+        bad_moves_for_opponent = 0
+        total_moves = len(moves)
+
+        for move in moves:
+            new_total = move[2]
+            dist = abs(21 - new_total)
+
+        if new_total > 21:
+            bad_moves_for_opponent += 1
+
+        elif new_total == 21:
+            opponent_best_option = 1000
+
+
+        trap_score = (bad_moves_for_opponent / total_moves) * 500 * blocking_weight
+    
+        final_score = my_score + trap_score
+    
+        return final_score if state.is_maximizing else -final_score
+
     def generate_summary_visualization(self, comparison_data):
         fig, axes = plt.subplots(3, 1, figsize=(14, 15))
         
@@ -432,7 +466,6 @@ class HeuristicAnalysis:
         plt.close()
         
         print(f"\nSummary visualization saved to: {self.visualizations_dir}/comparative_summary.png")
-
 
 def main():
     print(f"\n{'='*80}")
