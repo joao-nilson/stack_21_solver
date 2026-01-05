@@ -1,5 +1,11 @@
 import sys
+import os
 from typing import List, Optional, Dict, Any
+
+current_dir = os.path.dirname(os.path.abspath(__file__))
+project_root = os.path.abspath(os.path.join(current_dir, '../..'))
+sys.path.insert(0, project_root)
+
 from src.game.game_state import GameState
 
 
@@ -18,6 +24,54 @@ class TreeVisualizer:
             'TERMINAL': '\033[95m', # Magenta
             'RESET': '\033[0m'      # Reset
         }
+
+    def build_game_tree(self, state: GameState, depth: int = 0, 
+                       evaluate_nodes: bool = True) -> None:
+        """
+        Build the game tree by exploring all possible moves.
+        
+        Args:
+            state: Current game state
+            depth: Current depth in the tree
+            evaluate_nodes: Whether to compute values for nodes
+        """
+        self.nodes_built += 1
+        
+        # Stop if we've reached max depth or terminal state
+        if depth >= self.max_depth or state.is_terminal:
+            if evaluate_nodes:
+                state.value = state.evaluate()
+            return
+        
+        # Get all possible moves
+        moves = state.get_possible_moves()
+        if not moves:
+            if evaluate_nodes:
+                state.value = state.evaluate()
+            return
+        
+        # Generate children
+        for move in moves:
+            child_state = state.apply_move(move)
+            state.children.append(child_state)
+            
+            # Recursively build child's subtree
+            self.build_game_tree(child_state, depth + 1, evaluate_nodes)
+        
+        # Evaluate this node based on children (if requested)
+        if evaluate_nodes and state.children:
+            # Simple minimax evaluation on built subtree
+            child_values = [child.value for child in state.children 
+                          if child.value is not None]
+            
+            if child_values:
+                if state.is_maximizing:
+                    state.value = max(child_values)
+                else:
+                    state.value = min(child_values)
+            else:
+                state.value = state.evaluate()
+
     
     def visualize_tree(self, root_state: GameState, highlight_path: Optional[List[GameState]] = None) -> str:
         if highlight_path is None:
@@ -117,14 +171,31 @@ class TreeVisualizer:
         return node_str
     
     def _get_children_for_display(self, state: GameState) -> List[GameState]:
-        if state.is_terminal or not hasattr(state, 'children'):
+        if state.is_terminal:
             return []
         
-        # Sort children by value for better display
+        if hasattr(state, 'children') and state.children:
+            children = state.children
+        else:
+            # Generate children on the fly (for backward compatibility)
+            children = []
+            for move in state.get_possible_moves():
+                child_state = state.apply_move(move)
+                children.append(child_state)
+            state.children = children
+        
+        # Sort for display
+        def get_sort_key(child):
+            if child.value is not None:
+                return child.value
+            # Estimate value if not computed
+            remaining = len(child.stack) - child.stack_index
+            return child.total + (remaining * 3.5)
+        
         children = sorted(
-            state.children, 
-            key=lambda x: x.value if x.value is not None else float('-inf'),
-            reverse=state.is_maximizing  # Best first for current player
+            children, 
+            key=get_sort_key,
+            reverse=state.is_maximizing
         )
         
         return children[:self.max_children]

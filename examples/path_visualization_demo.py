@@ -1,3 +1,4 @@
+#examples/path_vizualization_demo.py
 import sys
 import os
 import json
