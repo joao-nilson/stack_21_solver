@@ -153,14 +153,30 @@ class StatisticalAggregator:
             heuristic_names = sorted([heur.get("name", "") for heur in heuristics])
             
             # Extract stack characteristics
-            stack_types = sorted([stack.get("stack_type", "") for stack in stacks])
+            stack_types = []
+            for stack in stacks:
+                stack_type = stack.get("stack_type", "")
+                # Convert to string if it's a dictionary
+                if isinstance(stack_type, dict):
+                    # Create a stable string representation
+                    import json
+                    stack_type_str = json.dumps(stack_type, sort_keys=True)
+                else:
+                    stack_type_str = str(stack_type)
+                stack_types.append(stack_type_str)
+        
+            # Sort the string representations
+            stack_types_sorted = sorted(stack_types)
+        
+            # Extract and sort stack lengths
             stack_lengths = sorted([stack.get("length", 0) for stack in stacks])
+
             
             # Create group key
             group_key = (
                 "_".join(algo_names),
                 "_".join(heuristic_names),
-                "_".join(stack_types),
+                "_".join(stack_types_sorted),
                 "_".join(str(l) for l in stack_lengths)
             )
             
@@ -273,11 +289,19 @@ class StatisticalAggregator:
         Returns:
             Dictionary with calculated statistics
         """
-        # Helper function to safely calculate stats
+        # Helper function to safely calculate stats - FIXED VERSION
         def safe_stats(values):
-            if not values:
-                return None
-            values = np.array(values)
+            # Convert to numpy array if needed
+            if isinstance(values, np.ndarray):
+                if values.size == 0:  # Check if array is empty
+                    return None
+            else:
+                # For lists or other sequences
+                if not values or len(values) == 0:
+                    return None
+                values = np.array(values)
+            
+            # Now values is guaranteed to be a non-empty numpy array
             return {
                 "mean": float(np.mean(values)),
                 "median": float(np.median(values)),
@@ -297,7 +321,7 @@ class StatisticalAggregator:
                 std_err = np.std(values) / np.sqrt(n)
                 h = std_err * stats.t.ppf((1 + confidence) / 2, n - 1)
                 return [float(mean - h), float(mean + h)]
-            except:
+            except Exception:
                 return None
         
         # Calculate statistics for each metric
@@ -312,10 +336,12 @@ class StatisticalAggregator:
         }
         
         for metric_name, values in metrics.items():
-            if values:
+            if values and len(values) > 0:  # Explicit check for non-empty
                 basic_stats = safe_stats(values)
                 if basic_stats:
-                    basic_stats["confidence_95"] = confidence_interval(values, 0.95)
+                    ci = confidence_interval(values, 0.95)
+                    if ci is not None:  # Only add CI if it was calculated
+                        basic_stats["confidence_95"] = ci
                     stats_result[metric_name] = basic_stats
         
         # Additional calculated metrics
@@ -326,7 +352,12 @@ class StatisticalAggregator:
             # Efficiency metric: value per second
             with np.errstate(divide='ignore', invalid='ignore'):
                 efficiency = np.where(avg_times > 0, avg_values / avg_times, 0)
-                stats_result["efficiency"] = safe_stats(efficiency[efficiency != 0])
+                # Filter out zero values before passing to safe_stats
+                non_zero_efficiency = efficiency[efficiency != 0]
+                if len(non_zero_efficiency) > 0:
+                    efficiency_stats = safe_stats(non_zero_efficiency)
+                    if efficiency_stats:
+                        stats_result["efficiency"] = efficiency_stats
         
         # Configuration diversity
         configs = stats_data.get("configurations", [])
@@ -493,17 +524,26 @@ class StatisticalAggregator:
                 
                 if "avg_value" in algo_stats:
                     val = algo_stats["avg_value"]
-                    ci = val.get("confidence_95", [0, 0])
+                    ci = val.get("confidence_95")
                     report.append(f"    Average Value: {val['mean']:.2f} ± {val['std']:.2f}")
-                    report.append(f"    95% CI: [{ci[0]:.2f}, {ci[1]:.2f}]")
+                    if ci:  # Check if CI exists before trying to format it
+                        report.append(f"    95% CI: [{ci[0]:.2f}, {ci[1]:.2f}]")
+                    else:
+                        report.append(f"    95% CI: Not available (insufficient data)")
                 
                 if "win_rate" in algo_stats:
                     wr = algo_stats["win_rate"]
+                    ci = wr.get("confidence_95")
                     report.append(f"    Win Rate: {wr['mean']:.1%} ± {wr['std']:.1%}")
+                    if ci:
+                        report.append(f"    95% CI: [{ci[0]:.1%}, {ci[1]:.1%}]")
                 
                 if "avg_time" in algo_stats:
                     time = algo_stats["avg_time"]
+                    ci = time.get("confidence_95")
                     report.append(f"    Avg Time: {time['mean']:.4f}s ± {time['std']:.4f}s")
+                    if ci:
+                        report.append(f"    95% CI: [{ci[0]:.4f}, {ci[1]:.4f}]")
                 
                 report.append("")
         
