@@ -1,0 +1,13 @@
+2026-01-10 15:14:57 - ExperimentRunner-Quick Test_20260110_151457_478c1389 - INFO - logger.py:66 - Logging to file: logs\stack21_20260110_151457.log
+2026-01-10 15:14:57 - ExperimentRunner-Quick Test_20260110_151457_478c1389 - INFO - logger.py:52 - Logger initialized for ExperimentRunner-Quick Test_20260110_151457_478c1389 at level INFO
+2026-01-10 15:14:57 - ExperimentRunner-Quick Test_20260110_151457_478c1389 - INFO - experiment_runner.py:48 - Initialized Experiment Runner with ID: Quick Test_20260110_151457_478c1389
+2026-01-10 15:14:57 - ExperimentRunner-Quick Test_20260110_151457_478c1389 - INFO - experiment_runner.py:49 - Output directory: experiment_results\results\20260110_151457
+2026-01-10 15:14:57 - ExperimentRunner-Quick Test_20260110_151457_478c1389 - INFO - experiment_runner.py:53 - Validating configuration...
+2026-01-10 15:14:57 - ExperimentRunner-Quick Test_20260110_151457_478c1389 - INFO - experiment_runner.py:63 - ✓ Configuration is valid
+2026-01-10 15:14:57 - ExperimentRunner-Quick Test_20260110_151457_478c1389 - INFO - experiment_runner.py:67 - Total experiments to run: 8
+2026-01-10 15:14:57 - ExperimentRunner-Quick Test_20260110_151457_478c1389 - INFO - experiment_runner.py:68 - Algorithms: 2
+2026-01-10 15:14:57 - ExperimentRunner-Quick Test_20260110_151457_478c1389 - INFO - experiment_runner.py:69 - Heuristics: 2
+2026-01-10 15:14:57 - ExperimentRunner-Quick Test_20260110_151457_478c1389 - INFO - experiment_runner.py:70 - Stacks: 2
+2026-01-10 15:14:57 - ExperimentRunner-Quick Test_20260110_151457_478c1389 - INFO - experiment_runner.py:272 - Starting 8 experiments...
+2026-01-10 15:14:57 - ExperimentRunner-Quick Test_20260110_151457_478c1389 - INFO - experiment_runner.py:299 - Progress: 1/8 (12.5%)
+2026-01-10 15:14:57 - ExperimentRunner-Quick Test_20260110_151457_478c1389 - INFO - experiment_runner.py:127 - Running experiment: minimax_Minimax-Basic__depth4_closeness_Closeness_bust_penalty_10000_distance_weight_50_win_bonus_10000__random_6_
