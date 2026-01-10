@@ -1,3 +1,4 @@
+#examples/full_analysis.py
 import sys
 import os
 import json

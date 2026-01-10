@@ -1,3 +1,4 @@
+#examples/solution_walkthrought.py
 def demonstrate_solution_path():    
     # Use a stack with known optimal solution
     test_stack = [3, 5, 2, 6, 4, 1, 3, 2]
