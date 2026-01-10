@@ -43,6 +43,11 @@
 └── README.md                                                                   *
 ```
 
+python -m analysis.statistical_aggregator --results-dir experiment_results/results --output-dir multi_run_analysis
+python experiment_runner.py --preset [PRESET] --validate-only
+python integrated_analysis.py --h
+python integrated_analysis.py --preset [PRESET]
+
 
 # Install dependencies
 pip install -r requirements.txt
